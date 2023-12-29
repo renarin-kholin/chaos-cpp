@@ -18,7 +18,6 @@ add_executable(chaos_linux
 add_subdirectory(dependencies/glfw-3.3.9)
 target_link_libraries(chaos_linux ${OPENGL_LIBRARY} glfw)
 target_include_directories(chaos_linux PUBLIC
-        dependencies/imgui-1.90/backends
         ${CMAKE_SOURCE_DIR}/dependencies/glfw-3.3.9/include
         ${CMAKE_SOURCE_DIR}/dependencies/imgui-1.90
         ${CMAKE_SOURCE_DIR}/dependencies/imgui-1.90/backends

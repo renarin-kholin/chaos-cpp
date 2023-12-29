@@ -1,0 +1,5 @@
+# ninja log v5
+0	16	1703691643171537524	CMakeFiles/chaos_linux.dir/Debug/src/main.cpp.o	8e1caa9137cce8c7
+16	95	1703691643251538856	Debug/chaos_linux	e2d7ee9dd4b516a9
+0	290	1703691684522215225	CMakeFiles/chaos_linux.dir/Debug/src/main.cpp.o	8e1caa9137cce8c7
+290	350	1703691684582216193	Debug/chaos_linux	e2d7ee9dd4b516a9

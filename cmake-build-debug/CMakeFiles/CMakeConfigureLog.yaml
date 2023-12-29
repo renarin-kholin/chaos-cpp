@@ -463,3 +463,198 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "dependencies/glfw-3.3.9/CMakeLists.txt:61 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gdwvtr"
+      binary: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gdwvtr"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shishu/CLionProjects/chaos/dependencies/glfw-3.3.9/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gdwvtr'
+        
+        Run Build Command(s): /home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/ninja/linux/x64/ninja -v cmTC_0b44b
+        [1/2] /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_0b44b.dir/src.c.o -c /home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gdwvtr/src.c
+        [2/2] : && /usr/bin/cc   CMakeFiles/cmTC_0b44b.dir/src.c.o -o cmTC_0b44b   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:682 (check_library_exists)"
+      - "dependencies/glfw-3.3.9/CMakeLists.txt:211 (find_package)"
+    checks:
+      - "Looking for XOpenDisplay in /usr/lib/libX11.so;/usr/lib/libXext.so"
+    directories:
+      source: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sVP3ME"
+      binary: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sVP3ME"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shishu/CLionProjects/chaos/dependencies/glfw-3.3.9/CMake/modules"
+    buildResult:
+      variable: "X11_LIB_X11_SOLO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sVP3ME'
+        
+        Run Build Command(s): /home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/ninja/linux/x64/ninja -v cmTC_3733b
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -fdiagnostics-color=always -o CMakeFiles/cmTC_3733b.dir/CheckFunctionExists.c.o -c /home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sVP3ME/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=XOpenDisplay  CMakeFiles/cmTC_3733b.dir/CheckFunctionExists.c.o -o cmTC_3733b  /usr/lib/libX11.so  /usr/lib/libXext.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:697 (check_function_exists)"
+      - "dependencies/glfw-3.3.9/CMakeLists.txt:211 (find_package)"
+    checks:
+      - "Looking for gethostbyname"
+    directories:
+      source: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pH4thb"
+      binary: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pH4thb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shishu/CLionProjects/chaos/dependencies/glfw-3.3.9/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_GETHOSTBYNAME"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pH4thb'
+        
+        Run Build Command(s): /home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/ninja/linux/x64/ninja -v cmTC_10455
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -fdiagnostics-color=always -o CMakeFiles/cmTC_10455.dir/CheckFunctionExists.c.o -c /home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pH4thb/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=gethostbyname  CMakeFiles/cmTC_10455.dir/CheckFunctionExists.c.o -o cmTC_10455   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:711 (check_function_exists)"
+      - "dependencies/glfw-3.3.9/CMakeLists.txt:211 (find_package)"
+    checks:
+      - "Looking for connect"
+    directories:
+      source: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8BEYRn"
+      binary: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8BEYRn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shishu/CLionProjects/chaos/dependencies/glfw-3.3.9/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_CONNECT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8BEYRn'
+        
+        Run Build Command(s): /home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/ninja/linux/x64/ninja -v cmTC_e8a2a
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -fdiagnostics-color=always -o CMakeFiles/cmTC_e8a2a.dir/CheckFunctionExists.c.o -c /home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8BEYRn/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=connect  CMakeFiles/cmTC_e8a2a.dir/CheckFunctionExists.c.o -o cmTC_e8a2a   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:720 (check_function_exists)"
+      - "dependencies/glfw-3.3.9/CMakeLists.txt:211 (find_package)"
+    checks:
+      - "Looking for remove"
+    directories:
+      source: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3r6jgn"
+      binary: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3r6jgn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shishu/CLionProjects/chaos/dependencies/glfw-3.3.9/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_REMOVE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3r6jgn'
+        
+        Run Build Command(s): /home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/ninja/linux/x64/ninja -v cmTC_f7a60
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -fdiagnostics-color=always -o CMakeFiles/cmTC_f7a60.dir/CheckFunctionExists.c.o -c /home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3r6jgn/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=remove  CMakeFiles/cmTC_f7a60.dir/CheckFunctionExists.c.o -o cmTC_f7a60   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:729 (check_function_exists)"
+      - "dependencies/glfw-3.3.9/CMakeLists.txt:211 (find_package)"
+    checks:
+      - "Looking for shmat"
+    directories:
+      source: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0DVQoP"
+      binary: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0DVQoP"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shishu/CLionProjects/chaos/dependencies/glfw-3.3.9/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_SHMAT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0DVQoP'
+        
+        Run Build Command(s): /home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/ninja/linux/x64/ninja -v cmTC_63f13
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -fdiagnostics-color=always -o CMakeFiles/cmTC_63f13.dir/CheckFunctionExists.c.o -c /home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0DVQoP/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=shmat  CMakeFiles/cmTC_63f13.dir/CheckFunctionExists.c.o -o cmTC_63f13   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake:739 (check_library_exists)"
+      - "dependencies/glfw-3.3.9/CMakeLists.txt:211 (find_package)"
+    checks:
+      - "Looking for IceConnectionNumber in ICE"
+    directories:
+      source: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-D8DbvK"
+      binary: "/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-D8DbvK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shishu/CLionProjects/chaos/dependencies/glfw-3.3.9/CMake/modules"
+    buildResult:
+      variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-D8DbvK'
+        
+        Run Build Command(s): /home/shishu/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/ninja/linux/x64/ninja -v cmTC_5edf0
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -fdiagnostics-color=always -o CMakeFiles/cmTC_5edf0.dir/CheckFunctionExists.c.o -c /home/shishu/CLionProjects/chaos/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-D8DbvK/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=IceConnectionNumber  CMakeFiles/cmTC_5edf0.dir/CheckFunctionExists.c.o -o cmTC_5edf0  -lICE && :
+        
+      exitCode: 0
+...

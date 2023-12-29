@@ -31,4 +31,4 @@
 *.out
 *.app
 
-dependencies/glfw-3.3.9/build
+build/*

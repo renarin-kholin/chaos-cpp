@@ -4,3 +4,9 @@
 [submodule "dependencies/imgui"]
 	path = dependencies/imgui
 	url = https://github.com/ocornut/imgui
+[submodule "dependencies/datachannel"]
+	path = dependencies/datachannel
+	url = https://github.com/paullouisageneau/libdatachannel.git
+[submodule "dependencies/json"]
+	path = dependencies/json
+	url = https://github.com/nlohmann/json

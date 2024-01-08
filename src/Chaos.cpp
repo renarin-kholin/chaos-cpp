@@ -56,6 +56,7 @@ void Chaos::setup(int width, int height, rtc::Configuration *rtc_config) {
 
     auto *ice_server = new rtc::IceServer("turn:global.relay.metered.ca", 80, "46c967b98ec9994d702767e8",
                                           "lcz6Ykhd14hYyKfP");
+
     rtc_config->iceServers.emplace_back(*ice_server);
     rtc_config->enableIceUdpMux = true;
     local_client_id = get_random_id(4);
@@ -178,7 +179,12 @@ void Chaos::render(const weak_ptr<rtc::WebSocket>& weak_websocket, rtc::Configur
         ImGui::BeginDisabled();
     }
     static char message_input[256] = "";
+    ImGui::SetKeyboardFocusHere();
     ImGui::InputText("Enter your message", message_input, IM_ARRAYSIZE(message_input));
+    if(ImGui::IsKeyPressed(ImGuiKey_Enter)){
+        send_message(make_weak_ptr(m_data_channel), message_input);
+        memset(message_input, 0, sizeof(message_input));
+    }
     if(ImGui::Button("Send", ImVec2(80.0f, 30.0f))){
         send_message(make_weak_ptr(m_data_channel), message_input);
         memset(message_input, 0, sizeof(message_input));

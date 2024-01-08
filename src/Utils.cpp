@@ -19,6 +19,7 @@ std::string get_random_id(const size_t length) {
 shared_ptr<rtc::PeerConnection> create_peer_connection(const rtc::Configuration& rtc_config, const weak_ptr<rtc::WebSocket>& weak_websocket, std::string client_id) {
     Chaos *chaos = Chaos::get_instance();
     auto t_peer_connection = std::make_shared<rtc::PeerConnection>(rtc_config);
+
     t_peer_connection->onStateChange([](rtc::PeerConnection::State state) {
         std::cout << "State: " << state << std::endl;
     });

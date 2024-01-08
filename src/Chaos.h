@@ -29,10 +29,10 @@ public:
     Chaos(Chaos &other) = delete;
     void operator=(const Chaos &) = delete;
 
-    void setup(int width, int height);
-    void setup_websockets();
+    void setup(int width, int height, rtc::Configuration *rtc_config);
+
     void clean();
-    void render();
+    void render(const weak_ptr<rtc::WebSocket>& wws, rtc::Configuration *rtc_config);
     static void error_callback(const std::string& error_message);
 
     [[nodiscard]] bool is_running() const {
@@ -45,12 +45,15 @@ public:
         m_user_messages.emplace_back<ChaosMessage>({message_content, client_id});
     }
     static Chaos * get_instance();
-
-
+    static void setup_websockets(const weak_ptr<rtc::WebSocket>& message_data, rtc::Configuration * rtc_config);
 
     std::unordered_map<std::string, shared_ptr<rtc::PeerConnection>> peer_connection_map;
-    std::unordered_map<std::string, shared_ptr<rtc::DataChannel>>data_channel_map;
+    std::unordered_map<std::string, shared_ptr<rtc::DataChannel>> data_channel_map;
 
+    std::string local_client_id;
+    std::string remote_client_id;
+
+    shared_ptr<rtc::DataChannel> m_data_channel;
 private:
     GLFWwindow * m_window = nullptr;
     ImVec4 clear_color = ImVec4(0.45f,0.55f,0.60f,1.0f);
@@ -61,10 +64,10 @@ private:
     std::vector<ChaosMessage> m_user_messages;
 
 
-    std::string local_client_id;
-    rtc::Configuration rtc_config;
 
-    std::shared_ptr<rtc::WebSocket> m_websocket;
+
+
+
 
 
 };
